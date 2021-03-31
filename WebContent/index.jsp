@@ -21,6 +21,7 @@
 		//JSONArray jary = new JSONArray();
 		
         try{
+        	System.out.println("=============== DEBUG 01");
         String url = "jdbc:mysql://mysql:3306/mydb";
         String id = "root";
         String pw = "root";
@@ -28,9 +29,13 @@
         conn=DriverManager.getConnection(url,id,pw);
         String sql = "select name, unitprice from parts where name='part1'";
         DatabaseMetaData meta = conn.getMetaData();
+        System.out.println("=============== DEBUG 02");
         pstmt = conn.prepareStatement(sql);
+        System.out.println("=============== DEBUG 03");
         pstmt.executeQuery();
+        System.out.println("=============== DEBUG 04");
         rs = pstmt.executeQuery();
+        System.out.println("=============== DEBUG 05");
         while (rs.next()){
 		jo = new JSONObject();
 		rmd = rs.getMetaData();
