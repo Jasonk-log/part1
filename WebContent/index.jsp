@@ -25,7 +25,7 @@
         String url = "jdbc:mysql://10.103.238.52:3306/mydb";
         String id = "root";
         String pw = "root";
-        Class.forName("com.mysql.jdbc.Driver");
+        Class.forName("com.mysql.cj.jdbc.Driver");
         System.out.println("=============== DEBUG 02");
         conn=DriverManager.getConnection(url,id,pw);
         System.out.println("=============== DEBUG 03");
