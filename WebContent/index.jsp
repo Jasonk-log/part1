@@ -22,7 +22,7 @@
 		
         try{
         	System.out.println("=============== DEBUG 01");
-        String url = "jdbc:mysql://mysql:3306/mydb";
+        String url = "jdbc:mysql://10.103.238.52:3306/mydb";
         String id = "root";
         String pw = "root";
         Class.forName("com.mysql.jdbc.Driver");
