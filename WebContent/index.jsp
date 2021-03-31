@@ -26,16 +26,18 @@
         String id = "root";
         String pw = "root";
         Class.forName("com.mysql.jdbc.Driver");
+        System.out.println("=============== DEBUG 02");
         conn=DriverManager.getConnection(url,id,pw);
+        System.out.println("=============== DEBUG 03");
         String sql = "select name, unitprice from parts where name='part1'";
         DatabaseMetaData meta = conn.getMetaData();
-        System.out.println("=============== DEBUG 02");
-        pstmt = conn.prepareStatement(sql);
-        System.out.println("=============== DEBUG 03");
-        pstmt.executeQuery();
         System.out.println("=============== DEBUG 04");
-        rs = pstmt.executeQuery();
+        pstmt = conn.prepareStatement(sql);
         System.out.println("=============== DEBUG 05");
+        pstmt.executeQuery();
+        System.out.println("=============== DEBUG 06");
+        rs = pstmt.executeQuery();
+        System.out.println("=============== DEBUG 07");
         while (rs.next()){
 		jo = new JSONObject();
 		rmd = rs.getMetaData();
